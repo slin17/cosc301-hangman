@@ -8,16 +8,13 @@
 
 
 /*
- * Linked list data structure definitions.  You can choose
- * to use these data structure and type definitions or modify
- * them to suit your taste.
+ * linked list data structure definitions
  */
 struct _wordnode {
     char word[256];
     struct _wordnode *next;
 };
 typedef struct _wordnode wordnode;
-
 
 
 /*
@@ -83,15 +80,26 @@ bool one_game(const char *word) {
 /* 
  * wordbank-related functions. please don't change the
  * function prototypes for these three functions.
+ * load_words takes the name of the file that should be
+ * opened and words read from, and a pointer to an int
+ * that should be indirectly modified to store the number
+ * of words loaded from the file.  The function should 
+ * return the linked list of words.
  */
-wordnode *load_words(const char *filename, int &num_words) {
+wordnode *load_words(const char *filename, int *num_words) {
 
 }
 
+/*
+ * Completely free and deallocate the linked list of words.
+ */
 void free_words(wordnode *wordlist) {
 
 }
 
+/*
+ * Choose one random word from the linked list and return it.
+ */
 const char *choose_random_word(wordnode *wordlist, int num_words) {
 
 }
